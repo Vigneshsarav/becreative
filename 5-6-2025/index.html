@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="brand">brand</a>
+        <div class="menu">
+            <div class="btn">
+                <i class="fas fa-times close-btn"></i>
+            </div>
+            <a href="#">Home</a>
+            <a href="#">Service</a>
+            <a href="#">About</a>
+            <a href="#">View</a>
+            <a href="#">Contact</a>
+        </div>
+        <div class="btn">
+            <i class="fas fa-bars menu-btn"></i>
+        </div>
+    </header>
+    <section class="section-main">
+        <h1>Sticky Navigation Bar</h1>
+    </section>
+    <section class="section-two">
+        <h2>protect Rainforests</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, dolor voluptatum? Dolorem hic facilis maiores perspiciatis, delectus voluptas eaque nostrum omnis debitis excepturi consequatur ex dolores. Tempora corrupti ab voluptas, nesciunt dignissimos numquam architecto quaerat porro nobis, blanditiis rem explicabo eligendi incidunt maxime cupiditate, quae vitae. Officia harum ratione perferendis?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium illo neque quo, fugiat, sint tempora deserunt distinctio voluptatibus repudiandae ea voluptatum odit. Ut eveniet sequi blanditiis magnam, possimus minus doloribus, voluptas sit natus cumque fugiat, exercitationem deserunt a iste nostrum.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, aliquam cupiditate, consequatur esse et suscipit iusto laborum accusamus, dolore veritatis fuga earum blanditiis omnis? Eum eius nostrum exercitationem similique tempore.</p>
+        <h2>Protect Nature</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus, quasi architecto accusamus cumque a temporibus rerum dolorum dolor veniam maxime, voluptas fuga similique neque tempore quidem pariatur magni suscipit distinctio!</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut amet incidunt consectetur aperiam dignissimos, natus corporis perferendis sunt. Suscipit vero quia ea nobis similique excepturi optio odit velit cum accusantium?</p>
+    </section>
+
+    <script type="text/javascript">
+
+        window.addEventListener('scroll',function(){
+            var header = document.querySelector('header');
+            header.classList.toggle('sticky',window.scrollY >0);
+        });
+
+        var menu = document.querySelector('.menu');
+        var menuBtn = document.querySelector('.menu-btn');
+        var closeBtn = document.querySelector('.close-btn');
+
+        menuBtn.addEventListener('click',()=>{
+            menu.classList.add('active');
+
+        });
+        closeBtn.addEventListener('click',()=>{
+            menu.classList.remove('active');
+        });
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+}
+/* position:relative */
+.section-main{ 
+    background: url(peakpx.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 20px 100px;
+}
+.section-main h1{
+    color: rgb(12, 22, 1);
+    font-weight: 800;
+    font-size: 60px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 80px;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 100px;
+    z-index: 999;
+    transition: 0.6s;
+}
+header.sticky{
+    background: #00000042;
+    padding: 15px 100px;
+}
+header .brand{
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+header .menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+header .menu a{
+    color: white;
+    margin: 0 30px;
+    padding: 0 10px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+header .menu a:hover{
+    color: black;
+    background-color: white;
+}
+header .btn{
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+    display: none;
+}
+.section-two{
+    background-color: #001018;
+    padding: 20px 100px;
+    min-height: 100vh;
+}
+.section-two h2{
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 30px 0;
+}
+.section-two p{
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 18px;
+    margin: 30px 0;
+}
+
+@media(max-width:1060px){
+    header .btn{
+        display: block;
+    }
+    header .menu{
+        position: fixed;
+        background-color: #1483D5;
+        flex-direction: column;
+        min-width: 400px;
+        height: 100vh;
+        top: 0;
+        right: -100%;
+        padding: 80px 50px;
+        transition: 0.5s;
+        transition-property: right;
+    }
+    header .menu.active{
+        right: 0;
+    }
+    header .menu .close-btn{
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 25px;
+    }
+    header .menu a{
+         font-size: 20px;
+         margin: 20px;
+         padding: 0 15px;
+         display: block;
+    }
+}
+@media (max-width:630px){
+    .section-main h1{
+        font-size: 50px;
+        line-height: 60px;
+    }
+}
+
+
+
+
+
+
+
+
+
